@@ -1,0 +1,31 @@
+.home-container{
+    margin-top: 120px;
+    margin-left: 120px;
+}
+.home-title{
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 700;
+    width: 580px;
+    height: 128px;
+    font-size: 48px;
+    line-height: 64px;
+    letter-spacing: 0.02em;
+    color: #062847;
+    
+}
+.home-container-description{
+    width: 612px;
+    height: 216px;
+}
+.home-container-description-text{
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 36px;
+    color: #5A6774;
+}
+.home-container-description-text a{
+    color: #1890FF;
+    text-decoration: none;
+}

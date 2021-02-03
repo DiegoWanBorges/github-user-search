@@ -1,14 +1,11 @@
 import React from 'react';
-
+import Routes from './Routes';
+import './app.scss'
 
 
 function App() {
   return (
-    <div>
-      <h1>Hello Word! Diego!</h1>
-    </div>
-
+    <Routes />
   );
 }
-
 export default App;

@@ -1,0 +1,23 @@
+.main-nav{
+    background: #1890FF;
+    height: 65px;
+    margin-left: -15px;
+    margin-top: -15px;
+    margin-right: -15px;
+    padding-left: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo-text{
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    text-decoration: none;
+    color: #FFF;
+}
+
+.nav-link{
+    text-decoration: none;
+}
