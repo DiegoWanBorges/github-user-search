@@ -1,0 +1,127 @@
+.search-container{
+    width: 1250px;
+    height: 270px;
+    background: #E6F7FF;
+    border-radius: 16px;
+    margin-left: 90px;
+    margin-top: 55px;
+    
+}
+.search-container-box{
+    padding-left:95px;
+    padding-top: 50px;
+
+    
+}
+.search-container-title{
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 500;
+    height: 45px;
+    font-size: 38px;
+    line-height: 46px;
+    color: #262626;
+}
+.search-container-text{
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: 680px;
+    height: 40px;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #BFBFBF;
+}
+
+.search-container-btn-find{
+    padding-top: 25px;
+}
+
+
+.seach-container-info{
+    display: flex;
+    padding-top: 55px;
+    padding-left: 30px;
+    padding-bottom: 75px;
+    
+}
+.search-container-info-left-img{
+    height: 280px;
+    width: 280px;
+    
+}
+.search-container-info-left-perfil-btn{
+    padding-top: 20px;
+}
+
+.seach-container-info-right{
+    padding-left: 45px;
+}
+.seach-container-info-right-top{
+    display: flex;
+}
+.seach-container-info-right-top-items-text{
+    margin-top: 0px;
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    box-sizing: border-box;
+    border-radius: 5px;
+    height: 22px;
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    color: #595959;
+    margin-right: 10px ;
+    margin-bottom: 9px;
+}
+.seach-container-info-right-information{
+    padding-top: 0px;
+    background: #FFF;
+    border: 1px solid #D9D9D9;
+    box-sizing: border-box;
+    border-radius: 6px;
+    height: 250px;
+    width: 893px;
+    padding-left: 15px;
+}
+.seach-container-info-right-information-title{
+    margin-top: 0px;
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: #1890FF;
+    
+}
+
+
+.seach-container-info-right-information-group{
+    display: flex;
+    align-items: center;
+    border: 1px solid #D9D9D9;
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: 840px;
+    height: 40px;
+    margin-bottom: 5px;
+}
+.seach-container-info-right-information-details{
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 500;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: #737373;
+}
+.seach-container-info-right-information-details-result{
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 400;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #737373;
+}
+

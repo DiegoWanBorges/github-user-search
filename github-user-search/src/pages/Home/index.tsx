@@ -17,7 +17,7 @@ const Home = () => (
             </h1>
         </div>
 
-        <Link to="/search">
+        <Link to="/search" className="home-container-btn">
             <Button name="Começar" />
         </Link>
 
