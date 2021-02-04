@@ -3,6 +3,7 @@ import './styles.scss'
 
 import Button from '../../../../core/components/Button';
 import { UserGit } from '../../../../core/types/UserGit';
+import { formatDate } from '../../../../core/utils/utils';
 
 type Props = {
     UserGit?: UserGit
@@ -63,7 +64,7 @@ const InformationGit = ({ UserGit }: Props) => {
                         <div className="seach-container-info-right-information-group">
                             <h4 className="seach-container-info-right-information-details">Membro desde: </h4>
                             <h4 className="seach-container-info-right-information-details-result">
-                                {UserGit?.created_at}
+                                { UserGit?.created_at ===undefined ? '' : formatDate(UserGit?.created_at)}
                             </h4>
                         </div>
                     </div>

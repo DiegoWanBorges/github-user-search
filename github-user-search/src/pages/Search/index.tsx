@@ -6,15 +6,12 @@ import MakeRequest from '../../core/utils/request';
 import { UserGit } from '../../core/types/UserGit';
 import SearchLoaders from './components/Loaders';
 
-
-
-
 const Search = () => {
     const[userGit,setUserGit]=useState<UserGit>();
     const[name, setName]=useState('');
     const[isLoading, setIsLoading] = useState(false);
     const[view, setView] = useState(false);
-        
+     
     const find =()=>{
         setIsLoading(true)
         MakeRequest({ url: `/users/${name}` })
