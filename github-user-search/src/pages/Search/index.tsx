@@ -1,68 +1,67 @@
 import Button from '../../core/components/Button'
 import './styles.scss'
+import {  useState } from 'react';
+import InformationGit from './components/InformationGit';
+import MakeRequest from '../../core/utils/request';
+import { UserGit } from '../../core/types/UserGit';
+import SearchLoaders from './components/Loaders';
 
-import { ReactComponent as ImgProfile } from '../../core/images/imgProfile.svg'
+
 
 
 const Search = () => {
+    const[userGit,setUserGit]=useState<UserGit>();
+    const[name, setName]=useState('');
+    const[isLoading, setIsLoading] = useState(false);
+    const[view, setView] = useState(false);
+        
+    const find =()=>{
+        setIsLoading(true)
+        MakeRequest({ url: `/users/${name}` })
+            .then(response => {
+                setUserGit(response.data)
+                console.log(userGit)
+                setView(true)
+                setIsLoading(false)
+
+            })
+            .catch(error =>{
+                setView(false)
+                setIsLoading(false)
+            })
+        }
+
     return (
         <div className="search-container">
             <div className="search-container-box">
                 <h1 className="search-container-title">Encontre um perfil Github</h1>
-                <input type="text" placeholder="Usuário GitHub" className="search-container-text" />
-                <div className="search-container-btn-find">
-                    <Button name="Encontrar" />
+                <input 
+                    type="text" 
+                    placeholder="Usuário GitHub" 
+                    className="search-container-text" 
+                    onChange={e => setName(e.target.value)}
+                    value={name}
+                />
+                
+                
+                <div onClick={find} className="search-container-btn-find">
+                    <Button  name="Encontrar" />
                 </div>
             </div>
-            <div className="seach-container-info">
-                <div className="seach-container-info-left">
-                    <div className="search-container-info-left-img">
-                        <ImgProfile />
-                    </div>
-                    <div className="search-container-info-left-perfil-btn">
-                        <Button name="Ver Perfil" />
-                    </div>
-                </div>
-                <div className="seach-container-info-right">
-                    <div className="seach-container-info-right-top">
-                        <h6 className="seach-container-info-right-top-items-text">Repositórios públicos: 62</h6>
-                        <h6 className="seach-container-info-right-top-items-text">Seguidores: 127</h6>
-                        <h6 className="seach-container-info-right-top-items-text">Seguindo: 416</h6>
-                    </div>
-
-                    <div className="seach-container-info-right-information">
-                        <h5 className="seach-container-info-right-information-title" >Informações</h5>
-
-                        <div className="seach-container-info-right-information-group">
-                            <h4 className="seach-container-info-right-information-details" >Empresa:  </h4>
-                            <h4 className="seach-container-info-right-information-details-result">
-                                Teste de tela para fonte
-                            </h4>
-                        </div>
-                        <div className="seach-container-info-right-information-group">
-                            <h4 className="seach-container-info-right-information-details">Website/Blog: </h4>
-                            <h4 className="seach-container-info-right-information-details-result">
-                                Teste de tela para fonte
-                            </h4>
-                        </div>
-                        <div className="seach-container-info-right-information-group">
-                            <h4 className="seach-container-info-right-information-details">Localidade: </h4>
-                            <h4 className="seach-container-info-right-information-details-result">
-                                Teste de tela para fonte
-                            </h4>
-                        </div>
-                        <div className="seach-container-info-right-information-group">
-                            <h4 className="seach-container-info-right-information-details">Membro desde: </h4>
-                            <h4 className="seach-container-info-right-information-details-result">
-                                Teste de tela para fonte
-                            </h4>
-                        </div>
+            
+            
+            {
+                isLoading ? <SearchLoaders/> :(
+                    view ? <InformationGit UserGit={userGit} /> :(
+                        <>
                         
-                        
-                        
-                    </div>
-                </div>
-            </div>
+                        </>
+                    )
+                )
+            }
+            
+            
+            
         </div>
     )
 }
